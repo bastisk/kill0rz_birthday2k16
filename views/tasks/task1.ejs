@@ -1,0 +1,41 @@
+<% include ../header.ejs %>
+<div class="container">
+        <h2>Aufgabe 1</h2>
+        <h3>Frage- und Problemstellung</h3>
+        <p> Ziel dieser Aufgabe ist es, dass du eine API bereitstellst. Diese API soll folgendes statistisches Problem lösen.<p>
+        <p> Berechne die Lorenzkurve für folgenden Sachverhalt:
+          Gegeben sind n Einheiten (Personen), welchen ein spezifisches Einkommen zugewiesen wird. Es ist die Lorenzkurve zu berechnen um die Gleichverteilung des Einkommens zu untersuchen.
+          Damit es nicht ganz so schwer wird, hier die <a href="http://www.crashkurs-statistik.de/lorenzkurve/">Erklärung</a> nach welchem Vorgehen die Werte zu berechnen sind.
+        <hr>
+        <h4>Inputformat</h4>
+        <p>Die API muss einen POST-Request mit den Form-Parameter "data" annehmen, welcher folgenden JSON String enthält: <pre>[k1, k2, k3, ..., kn]</pre> wobei <code>n</code> die Anzahl an Einheiten, und <code>kn</code> die Einkommen der einzelnen Einheiten sind.</p>
+        <p>weitere Bedingungen: <code>2 < n < 100</code>, <code>0 < k < 1000</code></p>
+        <p>Encoding: application/x-www-form-urlencoded </p>
+        <hr>
+        <h4>Outputformat</h4>
+        <p>Die API muss folgenden JSON String zurückliefern, wobei <code>xn</code> und <code>yn</code> jeweils die Werte für die x und y Achse der Lorenzkurve sind. <pre>[{"x": "x1", "y": "y1"}, {"x": "x2", "y": "y2"}, ..., {"x": "xn", "y": "yn"}]</pre> </p>
+        <p>weitere Bedingungen: Die Werte sind auf zwei Stellen nach dem Komma zu runden.</p>
+        <hr>
+        <h4>Beispiel</h4>
+        <p>Folgender Input</p>
+        <pre>{ data: '[558,135,899,442,554,975,936,655,606,83,248]' }</pre>
+        <p>liefert jenen Output</p>
+        <pre>[{"x":"0.09","y":"0.09"},{"x":"0.11","y":"0.18"},{"x":"0.26","y":"0.27"},{"x":"0.33","y":"0.36"},{"x":"0.42","y":"0.45"},{"x":"0.58","y":"0.55"},{"x":"0.74","y":"0.64"},{"x":"0.85","y":"0.73"},{"x":"0.95","y":"0.82"},{"x":"0.96","y":"0.91"},{"x":"1.00","y":"1.00"}]</pre>
+        <hr>
+        <h3>Deine Lösung</h3>
+        <p>Gib hier die URL zu deiner API ein. Anschließend wird die Anwendung einen Test-Request schicken.</p>
+        <p>Wenn deine API funktioniert, erhälst du einen Punkt auf diese Aufgabe und hast die Challenge gewonnen. Falls deine API nicht funktioniert, wirst du eine unveränderte Aufgabenseite sehen.</p>
+        <p>Die Logik parst den Response via <code>JSON.stringify()</code> und vergleicht den String mit dem intern erstellten String. Sind diese gleich so gilt die Challenge als bestanden.</p>
+        <form method="POST" class="form-inline">
+          <div class="form-group">
+            <label>URL zum API Endpunkt</label>
+          <input type="text" class="form-control" name="url"></input>
+        </div>
+          <input type="submit" class="form-control" value="API testen"></input>
+        </form>
+        <hr>
+        <h3>Hilfe</h3>
+        <p>Solltest du gar nicht zu recht kommen, kann ich dir auch zeigen wie es geht und die Challange als erfüllt schalten. Dann erhälst du Zugriff auf die Gewinnseite. In diesem Fall kontaktiere mich bitte via Sued:Board.</p>
+        <hr>
+	</body>
+	</html>

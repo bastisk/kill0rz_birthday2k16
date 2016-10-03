@@ -1,0 +1,40 @@
+<% include header.ejs %>
+<div class="container">
+        <h2>Dein Geschenk</h2>
+        <% if (tasks.length != 0) {%>
+          <p>Lieber Kevin, <br>
+            zu deinem Geburstag wünsche ich dir alles erdenklich gute, viel Freude, Gesundheit und Erfolg im Beruf!
+            Dein Geschenk für dieses Jahr ist ein technisches Gerät - damit du deine eigenen Projekte realisieren kannst und wir vielleicht zusammen gemeinsame Projekte weiter machen können. Was es genau ist verate ich dir auch hier noch nicht (hehe^^), das bleibt eine Überraschung bis zur Übergabe des Geschenks. <br></p>
+          <div class="row">
+            <div class="col col-md-6">
+              <h3>Übergabeort</h3>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d621.4379426576031!2d11.9572828292685!3d51.462713834266914!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDI3JzQ1LjgiTiAxMcKwNTcnMjguMiJF!5e0!3m2!1sde!2sde!4v1475273842455" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="col col-md-6">
+              <h3>Geschenkübergabe</h3>
+              <p>Ich werde dir dein Geschenk persönlich überreichen. Ich habe dazu den Ort links auf der Karte ausgewählt, der ist für uns beide nicht so weit weg ;).</p>
+              <p>Gib bitte in der Textbox unten dein gewünschtes Übergabedatum sowie die Uhrzeit an. Ich bekomme sobald du auf "Daten senden" drückst eine E-Mail mit deinem Vorschlag. <br> Ich kann dir dein Geschenk zu folgenden Zeiten überreichen:</p>
+                <ul>
+                  <li>Mo. - Fr. ab 18h</li>
+                  <li>Sa. - So. so ziemlich rund um die Uhr</li>
+                </ul>
+
+              <p>Gerne kann ich dir dein Geschenk auch überreichen, wenn wir uns das nächste Mal sehen (z.B. an der Garage o.Ä.). Wenn du das möchtest kannst du das auch unten in das Textfeld reinschreiben ;)</p>
+              <form method="POST">
+                <div class="form-group">
+                <label>gewünschtes Übergabedatum inkl. Uhrzeit</label>
+                <input class="form-control" type="text" placeholder ="XX.XX.2016 XX:XX" name="feedback"></input>
+                <br>
+                <center><input type="submit" class="btn btn-primary"></input></center>
+              </div>
+              </form>
+
+
+          </div>
+        </div>
+
+
+
+        <%}%>
+	</body>
+	</html>

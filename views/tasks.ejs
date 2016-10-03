@@ -1,0 +1,30 @@
+<% include header.ejs %>
+<div class="container">
+        <h2>Aufgaben</h2>
+        <table class="table">
+          <thead>
+            <th>Aufgabenkomplex</th>
+            <th>Thema</th>
+            <th>geschätzte Dauer</th>
+            <th>Status</th>
+            <th>Ergebnis</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>API Programmierung</td>
+              <td>2h</td>
+              <td><a class="btn btn-primary" href="tasks/1">Aufgabe starten</a></td>
+              <td><% if(tasks.length != 0) {%><%= tasks[0].score %><%}%></td>
+            </tr>
+            <% if(tasks.length != 0) {%>
+            <div class="jumbotron">
+              <h2>Herzlichen Glückwunsch!</h2>
+              <p>Du hast die Aufgabe erfolgreich gelöst. Ich hoffe es hat dir Spaß gemacht. Nun aber...</p>
+              <a href="/geschenk" class="btn btn-primary btn-lg">zu deinem Geschenk</a>
+            </div>
+            <%}%>
+          </tbody>
+        </table>
+	</body>
+	</html>
